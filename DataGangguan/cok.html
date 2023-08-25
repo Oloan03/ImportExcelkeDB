@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            right: -220px;
+            height: 100%;
+            transition: right 0.3s ease-in-out;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .burger-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="burger-btn">&#9776;</button>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li>Januari</li>
+            <li>Februari</li>
+            <li>Maret</li>
+            <li>April</li>
+            <li>Mei</li>
+            <li>Juni</li>
+            <li>Juli</li>
+            <li>Agustus</li>
+            <li>September</li>
+            <li>Oktober</li>
+            <li>November</li>
+            <li>Desember</li>
+        </ul>
+    </div>
+    <div class="content">
+        <table>
+            <tr>
+                <th>Tabel</th>
+                <th>Gangguan</th>
+                <th>Jaringan</th>
+                <th>Harian</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const burgerBtn = document.querySelector('.burger-btn');
+        const sidebar = document.getElementById('sidebar');
+
+        burgerBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('show-sidebar');
+        });
+    </script>
+</body>
+</html>

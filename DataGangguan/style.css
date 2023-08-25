@@ -1,0 +1,109 @@
+body {
+  background-color: gainsboro;
+  height: auto!important ;
+  margin: none;
+}
+
+.edit-form,
+.add-form {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 50px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  size: 20px;
+  border-radius: 5px;
+  background-color: aquamarine;
+  color: rgb(0, 0, 0);
+  margin-right: 325px;
+}
+
+a:hover {
+  background-color: green;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grup {
+  position: relative;
+}
+
+.form .grup label {
+  font-size: 14px;
+  color: #5d5b5b;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  transition: all .3s ease;
+}
+
+.form .grup input, select,
+.form .grup textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.form .grup input:placeholder-shown+ label, select:placeholder-shown+ label, .form .grup textarea:placeholder-shown +label {
+  top: 10px;
+  background-color: transparent;
+}
+
+.form .grup input:focus,
+.form .grup select:focus,
+.form .grup textarea:focus {
+  border-color: #3366cc;
+}
+
+.form .grup input:focus+ label, .form .grup textarea:focus +label, select:focus +label {
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  color: #3366cc;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form .group textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form button {
+  background-color: #3366cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #27408b;
+}
